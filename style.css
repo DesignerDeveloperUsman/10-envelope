@@ -1,0 +1,59 @@
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    
+}
+a{
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #073668;
+    font-size: 25px;
+    position: relative;
+}
+a::before{
+    content: "MOVE DOWN";
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #073668;
+    font-size: 25px;
+    position: absolute;
+    background-color: #7a004b;
+    top: -57px;
+    left: 0;
+    transform: rotateX(360deg);
+    min-width:  250px;
+
+    transform-origin: top;
+    transition: all 1s ;
+}
+a:hover::before{
+    top: 0;
+    transform: rotatey(0deg);
+
+}
+a::after{
+    content: "MOVE UP ";
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #073668;
+    font-size: 25px;
+    position: absolute;
+    background-color: rgb(233, 14, 51);
+    bottom: -57px;
+    right: 0;
+    transform: rotateX(360deg);
+    transform-origin: bottom;
+    transition: all 1s;
+    transition-delay: 0.3s;
+    min-width:  250px;
+}
+a:hover::after{
+    bottom: 0;
+    transform: rotateX(0deg);
+    content: "CLOSE";
+}
+
